@@ -1,0 +1,34 @@
+.card__article {
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.card__article img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.description {
+    font-size: 17px;
+    margin: 6px;
+}
+
+.description article {
+    padding-bottom: 5px;
+}
+
+.description article {
+    min-height: 100px;
+}
+
+.description article a {
+    text-decoration: none;
+    color: inherit;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.description span {
+    font: 400 0.875rem "Arial", "sans-serif";
+    color: #5a5a5a;
+}

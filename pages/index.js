@@ -1,8 +1,20 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import { Banner } from '../components/Banner'
+import { Footer } from '../components/Footer'
+import { GridArticles } from '../components/GridArticles'
+import { Header } from '../components/Header'
+import { getArticles } from '../services/storeService'
+import { agruparTagsArticulos, ordenarPorCantidad, ordenarPorRepetidos } from '../utils/index'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+
+
+export default function Home({ articles }) {
+  const arrayTags = agruparTagsArticulos(articles)
+  const arrayUnico = ordenarPorRepetidos(arrayTags);
+  const arrayOrdenadoPorCantidad = ordenarPorCantidad(arrayUnico)
+  const arrayPrimeros10Tags = arrayOrdenadoPorCantidad.splice(0, 10)
+  console.log(arrayPrimeros10Tags);
   return (
     <div className={styles.container}>
       <Head>
@@ -10,12 +22,20 @@ export default function Home() {
         <meta name="description" content="especiales.lanacion.com.ar" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      {/* A partir del tag main de html, componentizar todos los elementos 
+      que considere necesario. */}
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Initial Template
-        </h1>
+        <Header />
+        <Banner />
+        <GridArticles tags={arrayPrimeros10Tags} articles={articles} />
       </main>
+      <Footer />
     </div>
   )
+}
+
+
+export async function getServerSideProps() {
+  const articles = await getArticles();
+  return { props: articles }
 }

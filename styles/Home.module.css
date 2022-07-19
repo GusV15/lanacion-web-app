@@ -1,7 +1,8 @@
 .container {
-  padding: 0 2rem;
+  width: 95%;
+  margin: auto;
+  background-color: #F3F3F3;
 }
-
 .main {
   min-height: 100vh;
   padding: 4rem 0;
@@ -11,7 +12,7 @@
   justify-content: center;
   align-items: center;
 }
-
+/* 
 .footer {
   display: flex;
   flex: 1;
@@ -114,3 +115,4 @@
     flex-direction: column;
   }
 }
+ */

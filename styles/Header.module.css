@@ -1,0 +1,39 @@
+.header__container {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+.container__menu_navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input__search {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    position: relative;
+    z-index: 100;
+    background: transparent;
+    width: 191px;
+}
+
+.container__img {
+    width: 420px;
+    height: 36px;
+}
+
+.button__suscribete {
+    background-color: #ffff24;
+    border: 1px solid #cccccc;
+    color: #000000;
+}
+
+.button__ingresar {
+    background-color: #ffffff;
+    border: 1px solid #0074c4;
+    color: #0074c4;
+}
