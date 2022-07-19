@@ -1,20 +1,21 @@
 import Head from 'next/head'
-import { Banner } from '../components/Banner'
-import { Footer } from '../components/Footer'
-import { GridArticles } from '../components/GridArticles'
+import { Main } from '../components/Main'
 import { Header } from '../components/Header'
+import { Footer } from '../components/Footer'
 import { getArticles } from '../services/storeService'
-import { agruparTagsArticulos, ordenarPorCantidad, ordenarPorRepetidos } from '../utils/index'
+import { useEffect } from 'react'
+import { useAppContext } from '../context/StateWrapper'
 import styles from '../styles/Home.module.css'
 
 
 
 export default function Home({ articles }) {
-  const arrayTags = agruparTagsArticulos(articles)
-  const arrayUnico = ordenarPorRepetidos(arrayTags);
-  const arrayOrdenadoPorCantidad = ordenarPorCantidad(arrayUnico)
-  const arrayPrimeros10Tags = arrayOrdenadoPorCantidad.splice(0, 10)
-  console.log(arrayPrimeros10Tags);
+  const { setInitialArticles } = useAppContext()
+
+  useEffect(() => {
+    setInitialArticles(articles)
+  }, [setInitialArticles, articles])
+
   return (
     <div className={styles.container}>
       <Head>
@@ -22,19 +23,19 @@ export default function Home({ articles }) {
         <meta name="description" content="especiales.lanacion.com.ar" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* A partir del tag main de html, componentizar todos los elementos 
-      que considere necesario. */}
-      <main className={styles.main}>
+      <div className={styles.main}>
         <Header />
-        <Banner />
-        <GridArticles tags={arrayPrimeros10Tags} articles={articles} />
-      </main>
-      <Footer />
+        <Main />
+        <Footer />
+      </div>
     </div>
   )
 }
 
-
+/**
+ * Función se ejecuta en el servidor en cada peticion que se realiza (SSR).
+ * @returns retorna las props que van a hidratar al cliente
+ */
 export async function getServerSideProps() {
   const articles = await getArticles();
   return { props: articles }

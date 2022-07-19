@@ -1,4 +1,4 @@
-export const Footer = () => {
+export function Footer() {
     return (
         <div className="lay">
             <section className="row footer-header">

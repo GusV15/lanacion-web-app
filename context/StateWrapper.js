@@ -1,21 +1,17 @@
 import { createContext, useContext, useState } from 'react'
 
 const AppContext = createContext({
-    articles: [],
-    tags: []
+    initialArticles: []
 })
 
 export default function StateWrapper({ children }) {
-    const [articles, setArticles] = useState([])
-    const [tags, setTags] = useState([])
+    const [initialArticles, setInitialArticles] = useState([])
 
     return (
         <AppContext.Provider
             value={{
-                articles,
-                setArticles,
-                tags,
-                setTags
+                initialArticles,
+                setInitialArticles,
             }}
         >
             {children}

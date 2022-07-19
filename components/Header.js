@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { Button } from './Button'
 import styles from '../styles/Header.module.css'
 
-export const Header = () => {
+export function Header() {
     return (
         <div>
             <div className={styles.container__menu_navigation}>

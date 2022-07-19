@@ -8,14 +8,6 @@
     color: #3390D0;
 }
 
-.list__tags a {
-    cursor: pointer;
-}
-
-.list__tags a:hover {
-    opacity: 0.7;
-}
-
 @media (max-width: 700px) {
     .list__tags {
       width: 100%;
