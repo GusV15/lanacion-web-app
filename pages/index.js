@@ -33,7 +33,7 @@ export default function Home({ articles }) {
 }
 
 /**
- * Función se ejecuta en el servidor en cada peticion que se realiza (SSR).
+ * Función que se ejecuta en el servidor en cada peticion que se realiza (SSR).
  * @returns retorna las props que van a hidratar al cliente
  */
 export async function getServerSideProps() {
