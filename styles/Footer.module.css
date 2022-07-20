@@ -1,0 +1,81 @@
+.footer__container {
+    width: 100%;
+}
+
+.footer__header {
+    height: 80px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info a {
+    margin-right: 30px;
+}
+
+.text__lanacion {
+    color: #006998;
+    font-size: 40px;
+    font-family: 'LNlogos' !important;
+    font-weight: 700;
+    text-transform: none;
+    line-height: 1;
+    letter-spacing: 1.5px;
+}
+
+.text__lanacion:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.footer__sitio {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.footer__sitio__links a,
+.footer__sitio__captcha a {
+    font-size: 16px;
+    list-style: none;
+    font-weight: 400;
+    color: #3390D0;
+}
+
+.footer__sitio__links a,
+.footer__sitio__captcha p a {
+    margin: 0 5px;
+}
+
+.footer__sitio__captcha p {
+    margin: 0;
+}
+
+.footer__header__app a:first-child {
+    padding-right: 5px;
+}
+
+.footer__copyright {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.footer__copyright__fiscal p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__copyright__fiscal span {
+    padding: 0 10px;
+}

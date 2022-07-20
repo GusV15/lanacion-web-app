@@ -2,7 +2,7 @@ import { Banner } from './Banner'
 import { ListTags } from './ListTags'
 import { ListArticles } from './ListArticles'
 
-import styles from '../styles/GridArticles.module.css'
+import styles from '../styles/Main.module.css'
 
 export function Main() {
     return (

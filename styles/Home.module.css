@@ -1,11 +1,12 @@
 .container {
   width: 95%;
   margin: auto;
-  background-color: #F3F3F3;
 }
 .main {
+  max-width: 1250px;
+  margin: auto;
   min-height: 100vh;
-  padding: 4rem 0;
+  padding: 0;
   flex: 1;
   display: flex;
   flex-direction: column;

@@ -4,25 +4,23 @@ import styles from '../styles/Header.module.css'
 
 export function Header() {
     return (
-        <div>
+        <div className={styles.header__container}>
             <div className={styles.container__menu_navigation}>
                 <Image src={'/img/menu.png'}
                     alt="logo La Nación"
-                    width={23}
-                    height={18}
+                    width={40}
+                    height={40}
                 />
-                <span>MENU</span>
+                <span className={styles.text__menu}>MENÚ</span>
                 <input className={styles.input__search} />
             </div>
             <div className={styles.container__img}>
-                <Image src={'/img/logo-la-nacion.svg'}
-                    alt="logo La Nación"
-                    width={420}
-                    height={36}
-                />
+                <span className={styles.text__lanacion}>LA NACION</span>
             </div>
-            <Button styles={styles.button__suscribete} text={'SUSCRIBETE'} />
-            <Button styles={styles.button__ingresar} text={'INGRESAR'} />
+            <div className={styles.container__buttons}>
+                <Button styles={styles.button__suscribete} text={'SUSCRIBETE'} />
+                <Button styles={styles.button__ingresar} text={'INGRESAR'} />
+            </div>
         </div>
     )
 }

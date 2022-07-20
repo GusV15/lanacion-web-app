@@ -1,48 +1,47 @@
+import Image from 'next/image';
+import styles from '../styles/Footer.module.css'
+
 export function Footer() {
     return (
-        <div className="lay">
-            <section className="row footer-header">
-                <section className="col-desksm-4 col-desk-6 footer-header__logo">
-                    <a href="https://www.lanacion.com.ar/" className="">
-                        <i className="logo-la-nacion"></i>
+        <div className={styles.footer__container}>
+            <div className={styles.footer__header}>
+                <div className={styles.info}>
+                    <a href="https://www.facebook.com/lanacion">
+                        <Image
+                            src={'/img/facebook.png'}
+                            width={20}
+                            height={20}
+                            alt="Facebook"
+                        />
                     </a>
-                </section>
-                <section className="col-12 col-desksm-4 col-desk-3 footer-header__redes">
-                    <a href="https://www.facebook.com/lanacion"><i className="icon-facebook"></i></a>
-                    <a href="https://twitter.com/LANACION"><i className="icon-twitter"></i></a>
-                    <a href="https://www.instagram.com/lanacioncom/"><i className="icon-instagram"></i></a>
-                    <a href="http://servicios.lanacion.com.ar/herramientas/rss/ayuda"><i className="icon-rss"></i></a>
-                </section>
-                <section className="col-12 col-desksm-4 col-desk-3 footer-header__app">
+                    <a href="https://twitter.com/LANACION">
+                        <Image
+                            src={'/img/twitter.png'}
+                            width={25}
+                            height={25}
+                            alt="Twitter"
+                        /></a>
+                    <a href="https://www.instagram.com/lanacioncom/"><Image
+                        src={'/img/instagram.png'}
+                        width={25}
+                        height={25}
+                        alt="Instagram"
+                    /></a>
+                    <a href="http://servicios.lanacion.com.ar/herramientas/rss/ayuda"><Image
+                        src={'/img/red.png'}
+                        width={25}
+                        height={25}
+                        alt="Red"
+                    /></a>
+                </div>
+                <div className={styles.footer__header__logo}>
+                    <a href="https://www.lanacion.com.ar/" className="">
+                        <span className={styles.text__lanacion}>LA NACION</span>
+                    </a>
+                </div>
+                <div className={styles.footer__header__app}>
                     <a href="https://play.google.com/store/apps/details?id=app.lanacion.activity&amp;hl=es_419" className="app_play">
                         <svg xmlns="http://www.w3.org/2000/svg" width="120" height="35" viewBox="0 0 120 35">
-                            <defs>
-                                {/* <linearGradient id="a" x1="60.827%" x2="26.926%" y1="4.947%" y2="71.916%">
-                                    <stop offset="0%" stop-color="#00A0FF"></stop>
-                                    <stop offset=".657%" stop-color="#00A1FF"></stop>
-                                    <stop offset="26.01%" stop-color="#00BEFF"></stop>
-                                    <stop offset="51.22%" stop-color="#00D2FF"></stop>
-                                    <stop offset="76.04%" stop-color="#00DFFF"></stop>
-                                    <stop offset="100%" stop-color="#00E3FF"></stop>
-                                </linearGradient>
-                                <linearGradient id="b" x1="107.622%" x2="-130.536%" y1="50.016%" y2="50.016%">
-                                    <stop offset="0%" stop-color="#FFE000"></stop>
-                                    <stop offset="40.87%" stop-color="#FFBD00"></stop>
-                                    <stop offset="77.54%" stop-color="#FFA500"></stop>
-                                    <stop offset="100%" stop-color="#FF9C00"></stop>
-                                </linearGradient>
-                                <linearGradient id="c" x1="86.253%" x2="-50.188%" y1="30.544%" y2="137.67%">
-                                    <stop offset="0%" stop-color="#FF3A44"></stop>
-                                    <stop offset="100%" stop-color="#C31162"></stop>
-                                </linearGradient>
-                                <linearGradient id="d" x1="-18.77%" x2="42.12%" y1="-12.973%" y2="34.805%">
-                                    <stop offset="0%" stop-color="#32A071"></stop>
-                                    <stop offset="6.85%" stop-color="#2DA771"></stop>
-                                    <stop offset="47.62%" stop-color="#15CF74"></stop>
-                                    <stop offset="80.09%" stop-color="#06E775"></stop>
-                                    <stop offset="100%" stop-color="#00F076"></stop>
-                                </linearGradient> */}
-                            </defs>
                             <g fill="none">
                                 <rect width="119.862" height="35" fill="#5A5A5A" rx="3"></rect>
                                 <g >
@@ -80,36 +79,37 @@ export function Footer() {
                             </g>
                         </svg>
                     </a>
-                </section>
-            </section>
-            <section className="row footer-sitio">
-                <section className="col-desksm-9 col-deskxl-8 footer-sitio__links">
-                    <a href="http://especiales.lanacion.com.ar/varios/mapa-sitio/index.html" className="item_link">Mapa del sitio</a>
-                    <a href="https://micuenta.lanacion.com.ar/ayuda" className="item_link">Ayuda</a>
-                    <a href="https://micuenta.lanacion.com.ar/tyc" className="item_link">Términos y condiciones</a>
-                    <a href="https://www.lanacion.in/#/" className="item_link">¿Cómo anunciar?</a>
-                    <a href="https://suscripciones.lanacion.com.ar/suscribirme/" className="item_link">Suscribirse al diario impreso</a>
-                </section>
-                <section className="col-desksm-3 col-deskxl-4 footer-sitio__captcha">
+                </div>
+            </div>
+            <div className={styles.footer__sitio}>
+                <div className={styles.footer__sitio__links}>
+                    <a href="http://especiales.lanacion.com.ar/varios/mapa-sitio/index.html">Mapa del sitio</a>
+                    <a href="https://micuenta.lanacion.com.ar/ayuda">Ayuda</a>
+                    <a href="https://micuenta.lanacion.com.ar/tyc">Términos y condiciones</a>
+                    <a href="https://www.lanacion.in/#/">¿Cómo anunciar?</a>
+                    <a href="https://suscripciones.lanacion.com.ar/suscribirme/">Suscribirse al diario impreso</a>
+                </div>
+                <div className={styles.footer__sitio__captcha}>
                     <p>Protegido por re CAPTCHA:
                         <a href="https://policies.google.com/terms?hl=es-419" className="condition">Condiciones</a>
                         <a href="https://policies.google.com/privacy?hl=es-419" className="private">Privacidad</a>
                     </p>
+                </div>
+            </div>
+            <section className={styles.footer__copyright}>
+                <section className={styles.footer__copyright__reserved}>
+                    <p>Copyright 2019 SA LA NACION | Todos los derechos reservados</p>
                 </section>
-            </section>
-            <section className="row footer-copyright">
-                <section className="col-desksm-6 col-desk-6 footer-copyright__fiscal">
+                <section className={styles.footer__copyright__fiscal}>
                     <p>
-                        <img src="https://static.glanacion.com/v2/ln/img/gda.jpg" alt="gda" className="img_gda" />
-                        Miembro de GDA. Grupo de Diarios América
+                        <Image src="https://static.glanacion.com/v2/ln/img/gda.jpg" alt="gda" width={38} height={20} />
+                        <span>Miembro de GDA. Grupo de Diarios América</span>
                         <a href="https://serviciosweb.afip.gob.ar/clavefiscal/qr/publicInfoD.aspx">
-                            <img src="https://static.glanacion.com/v2/ln/img/data.jpg" alt="Data fiscal" className="img_data-fiscal" />
+                            <Image src="https://static.glanacion.com/v2/ln/img/data.jpg" width={33} height={45} alt="Data fiscal" />
                         </a>
                     </p>
                 </section>
-                <section className="col-desksm-6 col-desk-6 footer-copyright__reserved">
-                    <p>Copyright 2019 SA LA NACION | Todos los derechos reservados</p>
-                </section>
+
             </section>
         </div>
     )

@@ -1,39 +1,75 @@
+
 .header__container {
     width: 100%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
+    margin: 10px;
+    padding: 10px;
+}
+
+.text__menu {
+    font-size: 14px;
+}
+
+.text__lanacion {
+    color: #006998;
+    font-size: 40px;
+    font-family: 'LNlogos' !important;
+    font-weight: 700;
+    text-transform: none;
+    line-height: 1;
+    letter-spacing: 1.5px;
+}
+
+.text__lanacion:hover {
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 .container__menu_navigation {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .input__search {
+    margin: 0 5px;
     padding: 10px;
     border: 1px solid #cccccc;
     border-radius: 3px;
-    position: relative;
-    z-index: 100;
     background: transparent;
     width: 191px;
+    height: 37px;
 }
 
-.container__img {
-    width: 420px;
-    height: 36px;
+.input__search:focus {
+    border: none;
+}
+
+.button__ingresar,
+.button__suscribete {
+    width: 115px;
+    height: 35px;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .button__suscribete {
     background-color: #ffff24;
     border: 1px solid #cccccc;
     color: #000000;
+    margin-right: 10px;
+
 }
 
 .button__ingresar {
     background-color: #ffffff;
     border: 1px solid #0074c4;
     color: #0074c4;
+}
+
+.container__buttons {
+    display: flex;
+    
 }
