@@ -21,7 +21,7 @@ export default function Home({ articles }) {
       <Head>
         <title>La Nación</title>
         <meta name="description" content="especiales.lanacion.com.ar" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/lanacion.ico" />
       </Head>
       <div className={styles.main}>
         <Header />
